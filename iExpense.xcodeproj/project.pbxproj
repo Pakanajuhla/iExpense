@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		864DE40F2B139E5E00697B7B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DE40E2B139E5E00697B7B /* Extension.swift */; };
 		866A215D2B0E8F3300BC4948 /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866A215C2B0E8F3300BC4948 /* iExpenseApp.swift */; };
 		866A215F2B0E8F3300BC4948 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866A215E2B0E8F3300BC4948 /* ContentView.swift */; };
 		866A21612B0E8F3400BC4948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866A21602B0E8F3400BC4948 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		864DE40E2B139E5E00697B7B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		866A21592B0E8F3300BC4948 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		866A215C2B0E8F3300BC4948 /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
 		866A215E2B0E8F3300BC4948 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -56,6 +58,7 @@
 				866A215C2B0E8F3300BC4948 /* iExpenseApp.swift */,
 				866A215E2B0E8F3300BC4948 /* ContentView.swift */,
 				86A6F3502B110DEB00A162CB /* AddView.swift */,
+				864DE40E2B139E5E00697B7B /* Extension.swift */,
 				866A21602B0E8F3400BC4948 /* Assets.xcassets */,
 				866A21622B0E8F3400BC4948 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				866A215F2B0E8F3300BC4948 /* ContentView.swift in Sources */,
 				866A215D2B0E8F3300BC4948 /* iExpenseApp.swift in Sources */,
 				86A6F3512B110DEB00A162CB /* AddView.swift in Sources */,
+				864DE40F2B139E5E00697B7B /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
