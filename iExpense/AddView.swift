@@ -20,27 +20,36 @@ struct AddView: View {
     let choiseCurrency = Locale.current.currency?.identifier ?? "USD"
     
     var body: some View {
-        NavigationStack {
-            Form {
-                TextField("Name", text: $name)
-                
-                Picker("Type", selection: $type) {
-                    ForEach(CategoriesTypes, id: \.self) {
-                        Text($0)
-                    }
+        
+        Form {
+            TextField("Name", text: $name)
+            
+            Picker("Type", selection: $type) {
+                ForEach(CategoriesTypes, id: \.self) {
+                    Text($0)
                 }
-                TextField("Amount", value: $amount, format: .currency(code: choiseCurrency))
-                    .keyboardType(.decimalPad)
             }
-            .navigationTitle("Add new expense")
-            .toolbar {
+            TextField("Amount", value: $amount, format: .currency(code: choiseCurrency))
+                .keyboardType(.decimalPad)
+        }
+        .navigationTitle("Add new expense")
+        .toolbar {  
+            ToolbarItem(placement: .confirmationAction) {
                 Button("Save") {
                     let item = ExpenseItem(name: name, type: type, amount: amount)
                     expenses.items.append(item)
                     dismiss()
                 }
             }
+            
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel", role: .cancel) {
+                    dismiss()
+                }
+            }
         }
+        .navigationBarBackButtonHidden()
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

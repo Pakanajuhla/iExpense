@@ -38,7 +38,6 @@ class Expenses {
 
 struct ContentView: View {
     @State private var expenses = Expenses()
-    @State private var showingAddExpense = false
     
     let choiseCurrency = Locale.current.currency?.identifier ?? "USD"
     
@@ -63,12 +62,11 @@ struct ContentView: View {
             }
             .navigationTitle("iExpenses")
             .toolbar {
-                Button("Add Expense", systemImage: "plus") {
-                    showingAddExpense = true
+                NavigationLink {
+                    AddView(expenses: expenses)
+                } label: {
+                    Label("Add Expense", systemImage: "plus")
                 }
-            }
-            .sheet(isPresented: $showingAddExpense){
-                AddView(expenses: expenses)   
             }
         }
     }
